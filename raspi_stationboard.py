@@ -11,6 +11,7 @@ API_URL = 'https://fahrplan.search.ch/api/stationboard.json'
 
 
 FETCH_PERIOD_S = 30
+SHOW_N_CONNECTIONS = 2
 STOPS = [
     {
         'name': 'Zürich, Brunau/Mutschellenstr.',
@@ -106,7 +107,7 @@ def display_line_with_scroll(text: str):
     for _ in range(length - 17):
         scrollphathd.scroll()
         scrollphathd.show()
-        time.sleep(0.04)
+        time.sleep(0.025)
     time.sleep(0.4)
 
 
@@ -130,7 +131,7 @@ def main():
         # now, display
         for line, connection in conns_per_line.items():
             conns = list(connections_for_display(connection, STOPS))
-            text = f'{line} ' + ' '.join(conns[:3])
+            text = f'{line} ' + ' '.join(conns[:SHOW_N_CONNECTIONS])
             display_line_with_scroll(text)
 
 
