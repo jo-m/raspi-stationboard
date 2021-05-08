@@ -1,5 +1,7 @@
 # Raspberry Pi Stationboard
 
+![](demo.gif)
+
 Shows next departures for multiple stations of Zurich Public Transport (VBZ), in real time.
 Needs a [ScrollPhat HD](https://shop.pimoroni.com/products/scroll-phat-hd?variant=2380803768330).
 Uses the Search.ch public transport API.
