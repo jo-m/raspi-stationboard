@@ -1,3 +1,13 @@
+# Raspberry Pi Stationboard
+
+Shows next departures for multiple stations of Zurich Public Transport (VBZ), in real time.
+Needs a [ScrollPhat HD](https://shop.pimoroni.com/products/scroll-phat-hd?variant=2380803768330).
+Uses the Search.ch public transport API.
+
+Tested on a Raspberry Pi Zero W.
+
+## Setup
+
 ```bash
 # on raspi
 sudo hostnamectl set-hostname stationboard-pi
@@ -10,7 +20,7 @@ crontab -e
 # @reboot /home/pi/stationboard/raspi_stationboard.py
 ```
 
-## Avahi
+### Avahi
 
 `/etc/avahi/services/ssh.service`:
 
